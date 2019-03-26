@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>praktikum 1</title>
+
+        <script language="JavaScript">
+            function jumlah() { // Membuat/mnedefinisikan function yang bernama jumlah
+                var bil1=perseFloat(frcontoh.bilangan1.value); 
+                // Variabel bil1 diberi nilai 
+                // dari element input name="bilangan1" dari form contoh
+                var bil2=parseFloat(frcontoh.bilangan2.value);
+                // Variabel bil1 diberi nilai 
+                // dari element input name="bilangan2" dari form contoh
+
+                // jika variabel bil1 kosong( tidak ada inputan)
+                // maka variabel bil1 diberi nilai 0.0
+                if(isNaN (bil1)) {
+                    bil1=0.0;
+                }
+                if(isNaN (bil2)) {
+                    bil2=0.0;
+                }
+
+                // Variabel hasil melakukan operasi aritmatika penjumlahan
+                // dimana hasil sama dengan penjumlahan dari variabel bil1 dan bil2 
+                var hasil = bil + bil2;
+
+                // Menampilkan kotak dialog yang berisi informasi.....
+                alert ("hasil penjumlahan = " + hasil);
+            } // menutup kode dari function jumlah
+
+        </script>
+    </head>
+    <body>
+        <form name = "frcontoh">
+            <h3>Memasukkan data lewat keyboard</h3>
+            Bilangan Pertama : <br>
+            <input type="text" size="25" name="bilangan1"><br>
+            Bilangan Kedua : <br>
+            <input type="text" size="25" name="bilangan2"><br><br>
+            <input type="button" value="jumlahkan" onclick="jumlah()">
+            <input type="reset" value="ulang">
+        </form>
+
+    </body>
+    </html>
